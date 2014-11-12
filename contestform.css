@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+.container {
+	margin-top: 15px;
+}
+.hero-unit h1 {
+	margin-bottom:10px;
+}
+.contestInputs input {
+	font-size:20px;
+	padding:10px;
+	margin-bottom: 15px;
+}
+.contestInputs button {
+	display:block;
+}
+.printOut {
+	border-top:3px solid red;
+	margin-top: 50px;
+}

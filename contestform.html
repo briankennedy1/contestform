@@ -1,0 +1,55 @@
+<head>
+  <title>Meyer Friends &amp; Family Contest</title>
+</head>
+
+<body>
+	<div class="container">
+	<div class="hero-unit">
+ 	<h1>Meyer Friends &amp; Family Discount Contest</h1>
+		<p>Sign up for your <strong>40% off coupon code</strong> for <strong>PotsandPans.com</strong> and share it with your friends. You do the sharing and we'll do the bean counting. If you bring in the most sales you'll win a prize.</p>
+	</div>
+
+	{{> contestForm}}
+
+	{{> printOut}}
+	</div>
+
+</body>
+
+<template name="contestForm">
+	<div class="contestInputs">
+		<input type="text" id="fullName" value="" placeholder="Full Name">
+		<input type="text" id="emailAddy" value="" placeholder="Email Address">
+		<button id="getIt" class="btn btn-primary btn-large">Get your coupon</button>
+	</div>
+	<div class="codeSuccess">
+		<h2>Success! Your coupon code is {{yourCode}}</h2>
+		<p><em>Coupon code won't work on sale or clearance items.</em></p>
+	</div>
+</template>
+
+<template name="printOut">
+	<div class="printOut">
+	<h2>Participants in Database</h2>
+	<table class="table table-striped">	
+		<thead>
+			<th>Full Name</th><th>Email Address</th><th>Coupon Code</th>
+		</thead>
+		<tbody>
+		{{#each participant}}
+		<tr class="participant">
+		<td>{{fullName}}</td><td>{{emailAddy}}</td><td>{{couponCode}}</td>
+		</tr>
+		{{/each}}
+		</tbody>
+	</table>
+
+	<h2>Coupon Codes in Database</h2>
+	<ul>
+		{{#each couponCodes}}
+		<li class="couponCodes">{{code}}</li>
+		{{/each}}
+	</ul>
+	</div>
+</template>
+
