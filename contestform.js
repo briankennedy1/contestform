@@ -7,15 +7,14 @@ ParticipantDB = new Meteor.Collection('participantDB');
 if (Meteor.isClient) {
 
   Template.contestForm.helpers({
-  
+  	formFilled : function(emailFilled){
+  		
+  	},
   /*  
       yourCode returns the coupon code assigned to that person's email address
       after the participant has submitted their info and they're in ParticipantDB. 
   */
     yourCode : function(){
-    //  var emailAddyValue = Session.get(emailAddy);
-    //  console.log(emailAddyValue);
-    //  var couponCodeValue = ParticipantDB.findOne({emailAddy: emailAddyValue}).couponCode; 
       return Session.get("currentCoupon");
     } 
   });
@@ -42,11 +41,15 @@ if (Meteor.isClient) {
       on the button with id of getIt. 
     */
     'click #getIt' : function(event, template){
-      
+    
       // fullName & emailAddy Grab the data out of the template
       var fullName = template.find('#fullName').value;
       var emailAddy = template.find('#emailAddy').value.toLowerCase();
-      
+      if (fullName === "") 
+      	return alert("Please enter your name");
+      if (emailAddy === "") 
+      	return alert("Please enter an email address");
+      	
       // currentParticipantCount figures out how many people have signed up + 1
       var currentParticipantCount = (ParticipantDB.find().count() + 1 ).toString();
       
@@ -58,6 +61,7 @@ if (Meteor.isClient) {
       var couponCode = CouponCodeDB.findOne({_id: currentParticipantCount}).code; 
       
         Session.set("currentCoupon", couponCode);
+    	
         // Take all the variables and insert them into the ParticipantDB
         Meteor.call('insertParticipant', fullName, emailAddy, couponCode);
     }

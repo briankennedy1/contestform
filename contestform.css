@@ -17,3 +17,7 @@
 	border-top:3px solid red;
 	margin-top: 50px;
 }
+.codeSuccess h1 {
+	background-color: yellow;
+	display: inline-block;
+}
