@@ -13,11 +13,18 @@
 .contestInputs button {
 	display:block;
 }
-.printOut {
-	border-top:3px solid red;
-	margin-top: 50px;
-}
+
 .codeSuccess h1 {
 	background-color: yellow;
 	display: inline-block;
+	border: 3px dashed #ccc;
+	padding: 5px 10px;
+}
+.footer {
+}
+.show {
+	display:block;
+}
+.hide {
+	display: none;
 }

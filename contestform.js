@@ -4,12 +4,41 @@ CouponCodeDB = new Meteor.Collection('couponCodeDB');
 // Database that houses all of the participants in the contest
 ParticipantDB = new Meteor.Collection('participantDB');
 
+
+Router.route('/', function () {
+  this.render('Home');
+});
+
+Router.route('/admin', function () {
+  this.render('printOut');
+});
+
+
 if (Meteor.isClient) {
 
   Template.contestForm.helpers({
-  	formFilled : function(emailFilled){
-  		
+  	formHide : function(){
+  	/* 
+      If someone has submitted their info, these if statements
+      will hide the form and show the success message.
+    */
+
+    // session.get != null
+       if (Session.get("currentCoupon") != null) {
+        return "hide"
+      }
+       else {
+        return "show"
+      }
   	},
+    codeShow : function(){
+       if (Session.get("currentCoupon") != null) {
+        return "show"
+      }
+       else {
+        return "hide"
+      }
+    },
   /*  
       yourCode returns the coupon code assigned to that person's email address
       after the participant has submitted their info and they're in ParticipantDB. 
@@ -30,6 +59,9 @@ if (Meteor.isClient) {
     // Will kill once this is final.
     couponCodes : function(){
       return CouponCodeDB.find({});
+    },
+    codeCount : function (){
+      return CouponCodeDB.find().count();
     }
   
   });
