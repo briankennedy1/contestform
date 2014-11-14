@@ -30,22 +30,22 @@
 	<div class="codeSuccess {{codeShow}}">
 		<h2>Success! Your coupon code is:</h2>
 		<h1>{{yourCode}}</h1>
-		<p><em>Code valid 11/24 - 12/10. Code won't work on sale or clearance items.</em></p>
+		<p><em>Code valid 11/24 - 12/10. Code won't work on sale or clearance items. You're competing against {{numberOfParticipants}} other people, go get 'em.</em></p>
 	</div>
 </template>
 
 <template name="printOut">
 	<div class="container">
 		<div class="printOut">
-		<h2>Participants in Database</h2>
+		<h2>{{participantCount}} Participants in Database</h2>
 		<table class="table table-striped">	
 			<thead>
-				<th>Full Name</th><th>Email Address</th><th>Coupon Code</th><th>Remove</th>
+				<th></th><th>Full Name</th><th>Email Address</th><th>Coupon Code</th><th>Remove</th>
 			</thead>
 			<tbody>
 			{{#each participant}}
 			<tr class="participant">
-			<td>{{fullName}}</td><td>{{emailAddy}}</td><td>{{couponCode}}</td><td><button class="btn btn-danger" id="removeParticipant">&times;</button></td>
+			<td></td><td>{{fullName}}</td><td>{{emailAddy}}</td><td>{{couponCode}}</td><td><button class="btn btn-danger" id="removeParticipant">&times;</button></td>
 			</tr>
 			{{/each}}
 			</tbody>

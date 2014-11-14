@@ -45,7 +45,10 @@ if (Meteor.isClient) {
   */
     yourCode : function(){
       return Session.get("currentCoupon");
-    } 
+    },
+    numberOfParticipants : function(){
+      return (ParticipantDB.find().count()) -1;
+    }
   });
 
   Template.printOut.helpers({
@@ -62,8 +65,10 @@ if (Meteor.isClient) {
     },
     codeCount : function (){
       return CouponCodeDB.find().count();
-    }
-  
+    },
+     participantCount : function (){
+      return ParticipantDB.find().count();
+    } 
   });
 
   Template.contestForm.events({
