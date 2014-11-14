@@ -40,12 +40,12 @@
 		<h2>{{participantCount}} Participants in Database</h2>
 		<table class="table table-striped">	
 			<thead>
-				<th></th><th>Full Name</th><th>Email Address</th><th>Coupon Code</th><th>Remove</th>
+				<th></th><th>Full Name</th><th>Email Address</th><th>Coupon Code</th><!--<th>Remove</th>-->
 			</thead>
 			<tbody>
 			{{#each participant}}
 			<tr class="participant">
-			<td></td><td>{{fullName}}</td><td>{{emailAddy}}</td><td>{{couponCode}}</td><td><button class="btn btn-danger" id="removeParticipant">&times;</button></td>
+			<td></td><td>{{fullName}}</td><td>{{emailAddy}}</td><td>{{couponCode}}</td><!--<td><button class="btn btn-danger" id="removeParticipant">&times;</button></td>-->
 			</tr>
 			{{/each}}
 			</tbody>
