@@ -28,3 +28,18 @@
 .hide {
 	display: none;
 }
+.mainImage {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.mainImage img {
+	border:1px solid #ccc;
+}
+.giftCardImages {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.giftCardImages img {
+	margin-right:25px;
+	padding-top:5px;
+}

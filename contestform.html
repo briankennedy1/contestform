@@ -10,15 +10,51 @@
 	<div class="container">
 		<div class="hero-unit">
 	 	<h1>Meyer Friends &amp; Family Holiday Contest</h1>
-	 	<div style="width:630px;margin:10px auto;"><img src="http://img.potsandpans.com/yePNikPJbaZ_-GUPn-30lWfj5l8=/images/pots-and-pans/email/141124ff/141124ffmain02.jpg"></div>
+	 	<div class="mainImage"><img class="img-responsive" src="http://img.potsandpans.com/yePNikPJbaZ_-GUPn-30lWfj5l8=/images/pots-and-pans/email/141124ff/141124ffmain02.jpg"></div>
 			<p>Sign up for your <strong>PotsandPans.com 40% off coupon code</strong> and share it with your friends. You do the sharing and we'll do the bean counting. The three people that bring in the most revenue will win prizes!</p>
-			<ul style="margin-top:15px;margin-bottom:25px;">
+		
+		<div class="giftCardImages">
+			<img src="http://img.potsandpans.com/bpnknDfFKdPC4lrn8NnTlvd-Olk=/images/pots-and-pans/email/141124ff/wayfair02.png" />
+			<img src="http://img.potsandpans.com/I5Df5Yj5D1meTZ4mC-265FLxxmg=/images/pots-and-pans/email/141124ff/cooking02.png" />
+			<img src="http://img.potsandpans.com/WF4BEWJRHbLGOCSPiS07_uznOEo=/images/pots-and-pans/email/141124ff/overstock02.png" />
+		</div>
+		
+		{{> contestForm}}
+		
+		<h4 style="margin-top:25px;">How do I win?</h4>
+			<ul>
+			<li>Simple. Just share the code with your friends and family. When they use your code they'll receive a whopping 40% off on PotsAndPans.com. Every time your code is used, you'll get credit for the sale. At the end of the contest, we'll determine which codes generated the most sales. The top three codes win!</li>
+			</ul>
+
+			<h4>Where can I share the code?</h4>
+			<ul>
+			<li>You can email it to your friends and family.</li>
+			<li>You can share it on Facebook.</li>
+			<li>You can tweet it to your social network.</li>
+			<li>You can share it on Pinterest, Instagram or any other closed network... meaning only your immediate friends and family will see it.</li>
+			</ul>
+			
+			<h4>Where can I not share the code?</h4>
+			<ul>
+			<li>Do not share it or post it to any public forums or networks. For example, do not post to deal sites such as Slickdeals, Fatwallet or other deal sites. Do not post it to business and professional networking sites such as LinkedIn. If others outside your immediate friends and family can see the discount code, then it breaks the contest rules and you will be disqualified :(</li>
+			</ul>
+
+			<h4>What are the prizes?</h4>
+
+			<ul>
 			<li>1st Prize: $250 Wayfair.com gift card</li>
 			<li>2nd Prize: $100 Wayfair.com gift card <strong>AND</strong> $100 Cooking.com gift card</li>
 			<li>3rd Prize: $100 Overstock.com gift card</li>
 			</ul>
-		{{> contestForm}}
-		
+
+			<h4>How long does the contest last?</h4>
+			<ul>
+			<li>Contest starts on 11/24 and ends on 12/10.</li>
+			</ul>
+			<h4>Does the code work on sale items?</h4>
+			<ul>
+			<li>Sale and clearance items are excluded.</li>
+			</ul>
 	</div>
 	<div class="footer">
 			<a target="_new" href="mailto:webservices@meyer.com">Built by Meyer Web Services</a>
@@ -37,8 +73,10 @@
 		<h2>Success! Your coupon code is:</h2>
 		<h1>{{yourCode}}</h1>
 		<h2>You're competing against {{numberOfParticipants}} other people, go get 'em.</h2>
+		<!--
 		<p><em>Code valid 11/24 - 12/10. Please keep it within your personal network (no LinkedIn) and don't post your code publicly. Contest eligibility is limited to Meyer US employees.  Only one coupon will be tallied per contestant. Winners will be determined after the coupon expiration date. Discount excludes sale and clearance items. Good luck!</em></p>
 		<p>If you have any questions about this contest please contact <a target="_new" href="mailto:webservices@meyer.com">webservices@meyer.com</a></p>
+		-->
 	</div>
 </template>
 
